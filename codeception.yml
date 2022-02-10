@@ -1,0 +1,30 @@
+suites:
+  api:
+    actor: ApiTester
+    path: .
+    modules:
+      enabled:
+        - REST
+    env:
+      prod:
+        modules:
+          config:
+            REST:
+              url: https://qa-practice.herokuapp.com/
+              depends: PhpBrowser
+      local:
+        modules:
+          config:
+            REST:
+              url: https://localhost:8080/
+              depends: PhpBrowser
+
+paths:
+  tests: tests
+  output: tests/_output
+  data: tests/_data
+  support: tests/_support
+
+settings:
+  shuffle: false
+  lint: true
