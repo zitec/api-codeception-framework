@@ -46,17 +46,6 @@ class PostEmployeeCest
         $I->seeResponseContainsJson(array("message" => "Validation failed for object='employee'. Error count: 1"));
     }
 
-    /*protected function provideUsers(): array
-    {
-        return [
-            ['fn' => "John", 'dob' => "1967-08-23", "email" => "john@test.com"],
-            ['fn' => "Laslo", 'dob' => "1965-01-21", "email" => "laslo@test.com"],
-            ['fn'=>"George", 'dob'=>"1999-10-22", "email" => "george@test.com"],
-            ['fn'=>"Mario", 'dob'=>"1998-07-03", "email" => "mario@test.com"]
-        ];
-    }*/
-
-
     protected function provideUsers(): array
     {
         $faker = Faker::create();
