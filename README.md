@@ -14,41 +14,31 @@
 - set Env var to path C:\ProgramData\ComposerSetup\bin
 
 ## Installation
-```html
+```sh
 composer install
 ```
 
 ## Run Tests via CLI - Linux/MacOS (using Makefile)
-```html
+```sh
 make test_prod
 ```
 
 ## Run Tests on Windows
-```html
+```sh
 vendor/bin/codecept.bat run --html --env prod
 ```
 
 ### Run in Docker Container
-```html
+```sh
 docker run -v ${PWD}:/project codeception/codeception run --html --env prod  
 ```
 
-### HTML Report
-```html
-php vendor/bin/codecept run --html --env prod
-```
-
-### XML Report
-```html
-php vendor/bin/codecept run --xml --env prod
-```
-
 ### Execute specific test suite only
-```html
+```sh
 php vendor/bin/codecept run tests/PostEmployeeCest.php --html --env prod
 ```
 
 ### Execute specific test scenario - 'getEmployeesWithToken' is the test name
-```html
+```sh
 php vendor/bin/codecept run tests:getEmployeesWithToken --html --env prod
 ```
